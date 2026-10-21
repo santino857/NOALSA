@@ -6,13 +6,13 @@
 
 CI_ENVIRONMENT = development
 
-app.baseURL = 'http://localhost:8080/'
+app.baseURL = 'https://noalsa.vercel.app/'
 
 # Base de datos (local o la de Clever Cloud)
-database.default.hostname = localhost
-database.default.database = distribuidora
-database.default.username = root
-database.default.password =
+database.default.hostname = b95haun5fifuuxqkm62g-mysql.services.clever-cloud.com
+database.default.database = b95haun5fifuuxqkm62g
+database.default.username = u9oegock4fnjdwz2
+database.default.password = nisrw63InL0UydoXlKEu
 database.default.DBDriver = MySQLi
 database.default.port = 3306
 
