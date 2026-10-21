@@ -1,0 +1,25 @@
+# Entorno y credenciales locales
+.env
+
+# Directorio writable (temporales, caché, logs y sesiones de usuario)
+writable/cache/*
+!writable/cache/index.html
+writable/debugbar/*
+!writable/debugbar/index.html
+writable/logs/*
+!writable/logs/index.html
+writable/session/*
+!writable/session/index.html
+writable/uploads/*
+!writable/uploads/index.html
+
+# Archivos de configuración de editores / SO
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+Thumbs.db
+.DS_Store

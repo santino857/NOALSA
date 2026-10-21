@@ -1,0 +1,13 @@
+:root { --verde: #4d6a45; --verde-claro: #667b5c; --crema: #fbf8f0; --queso: #e0b94a; }
+body { background: var(--crema); }
+.navbar-queso { background: var(--verde); }
+.navbar-queso .nav-link.active { font-weight: 600; border-bottom: 2px solid var(--queso); }
+.table-queso thead { background: var(--verde-claro); color: #fff; }
+.table-queso thead th { background: var(--verde-claro); color: #fff; border-color: var(--verde-claro); }
+.card { border-color: #e4dfcf; }
+.btn-queso { background: var(--verde); border-color: var(--verde); color: #fff; }
+.btn-queso:hover { background: #3d5536; border-color: #3d5536; color: #fff; }
+.saldo-deuda { color: #b02a37; font-weight: 600; }
+.saldo-ok { color: #2f7d4f; }
+.monto { white-space: nowrap; text-align: right; }
+.stat-num { font-size: 1.6rem; font-weight: 700; }
