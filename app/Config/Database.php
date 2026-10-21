@@ -26,10 +26,10 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => '127.0.0.1',
-        'username'     => 'root',
-        'password'     => '',
-        'database'     => 'distribuidora',
+        'hostname'     => 'b95haun5fifuuxqkm62g-mysql.services.clever-cloud.com',
+        'username'     => 'u9oegock4fnjdwz2',
+        'password'     => 'nisrw63InL0UydoXlKEu',
+        'database'     => 'b95haun5fifuuxqkm62g',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
