@@ -19,6 +19,15 @@ if (! getenv('CI_ENVIRONMENT')) {
     $_SERVER['CI_ENVIRONMENT'] = 'production';
 }
 
+// Configurar APP_BASE_URL automáticamente según el host de Vercel si no se especificó
+if (! getenv('APP_BASE_URL')) {
+    $host = $_SERVER['HTTP_HOST'] ?? ($_SERVER['VERCEL_URL'] ?? 'noalsa.vercel.app');
+    $baseUrl = "https://{$host}/";
+    putenv("APP_BASE_URL={$baseUrl}");
+    $_SERVER['APP_BASE_URL'] = $baseUrl;
+    $_ENV['APP_BASE_URL'] = $baseUrl;
+}
+
 $_SERVER['SCRIPT_NAME'] = '/index.php';
 
 chdir(__DIR__ . '/../public');

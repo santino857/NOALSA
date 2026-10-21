@@ -16,7 +16,7 @@ class App extends BaseConfig
      *
      * E.g., http://example.com/
      */
-    public string $baseURL = 'http://localhost:8080/';
+    public string $baseURL = 'https://noalsa.vercel.app/';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.
@@ -205,8 +205,16 @@ class App extends BaseConfig
         parent::__construct();
 
         // URL pública del sitio (en Vercel: https://tu-dominio.vercel.app/)
-        if ($url = getenv('APP_BASE_URL')) {
+        $url = getenv('APP_BASE_URL') ?: ($_ENV['APP_BASE_URL'] ?? null) ?: ($_SERVER['APP_BASE_URL'] ?? null);
+        if ($url) {
             $this->baseURL = rtrim($url, '/') . '/';
+        } elseif (! empty($_SERVER['HTTP_HOST'])) {
+            $isHttps = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+                || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https')
+                || (isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443);
+
+            $scheme = $isHttps ? 'https' : 'http';
+            $this->baseURL = $scheme . '://' . $_SERVER['HTTP_HOST'] . '/';
         }
     }
 }
