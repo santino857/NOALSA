@@ -44,7 +44,7 @@
                 </tr>
             <?php endforeach; ?>
             <?php if (! $top_deudores): ?>
-                <tr><td class="text-muted">Nadie debe plata. 🎉</td></tr>
+                <tr><td class="text-muted">Nadie debe plata. </td></tr>
             <?php endif; ?>
             </tbody>
         </table></div>

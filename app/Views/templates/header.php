@@ -15,7 +15,7 @@ $seccion  = explode('/', trim(uri_string(), '/'))[0];
 ?>
 <nav class="navbar navbar-expand-md navbar-dark navbar-queso mb-4">
     <div class="container">
-        <a class="navbar-brand" href="<?= site_url('/') ?>">🧀 Distribuidora de lácteos</a>
+        <a class="navbar-brand" href="<?= site_url('/') ?>"> Distribuidora de lácteos</a>
         <?php if ($logueado): ?>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-label="Menú">
                 <span class="navbar-toggler-icon"></span>
